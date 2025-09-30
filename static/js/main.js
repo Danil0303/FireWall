@@ -30,6 +30,6 @@ function isValid(ip) {
 
 function isOneIp(ip) {
       let ipElements = document.querySelectorAll('.ip-list span');
-      Array.from(ipElements).map(span => span.textContent.trim());
+      return Array.from(ipElements).some(span => span.textContent.trim() === ip);
 }
 
