@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FileMoll</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+    <main>
+        <div id="notification" class="hidden">
+
+        </div>
+        <div class="container">
+            <h1>FileMoll</h1>
+            <form>
+                <div class="date-row">
+                    <label for="dateFrom">От:</label>
+                    <input type="date" id="dateFrom" >
+                    <label for="dateTo">До:</label>
+                    <input type="date" id="dateTo" >
+                </div>
+                <div class="ip-row">
+                    <label for="ipv4Input">IPv4:</label>
+                    <input type="text" placeholder="Например: 192.168.1.1" id="ipv4Input" required>
+                </div>
+                <div class="button-row">
+                    <button type="button" id="add" class="btn-add">Добавить</button>
+                    <button type="submit" class="btn-send">Отправить</button>
+                </div>
+            </form>
+            <div class="ip-container"></div>
+        </div>
+    </main>
+<script src="/static/js/main.js"></script>
+</body>
+</html>
