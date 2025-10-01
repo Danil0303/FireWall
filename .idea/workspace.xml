@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1ea72853-6edb-42bd-a616-92e4bf48ea81" name="Changes" comment="main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page/ipv4/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/page/ipv4/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page/ipv4/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/page/ipv4/router.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -194,7 +192,31 @@
       <option name="project" value="LOCAL" />
       <updated>1759329039138</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="main">
+      <option name="closed" value="true" />
+      <created>1759330000199</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1759330000199</updated>
+    </task>
+    <task id="LOCAL-00013" summary="main">
+      <option name="closed" value="true" />
+      <created>1759330039434</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1759330039434</updated>
+    </task>
+    <task id="LOCAL-00014" summary="main">
+      <option name="closed" value="true" />
+      <created>1759330085813</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1759330085813</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

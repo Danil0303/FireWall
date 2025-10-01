@@ -60,8 +60,20 @@ function Request(event){
             {'ip':ip,'dateFrom':new Date(dateFrom), 'dateTo':new Date(dateTo)}
         )
     })
-    .then(response => response.json())
-    .then(data => ShowInfo(data.detail, 'success'))
+    .then(response => {
+        if (response.ok) {
+            return response.json()
+        } else {
+
+        }
+    })
+    .then(data => {
+        if (data && data.status_code == 200) {
+            ShowInfo(data.detail, 'success'); // Показываем сообщение успеха
+        } else {
+            ShowInfo(data.detail); // Обрабатываем ошибку или другое состояние
+        }
+    })
     .catch(error => ShowInfo('Ошибка:'+error));
 
 }
