@@ -7,7 +7,7 @@ function Add(event) {
     var dateTo = document.getElementById('dateTo').value;
     if (!isValid(ip.value)) return console.log(ip);
     var ipList = document.querySelector(".ip-container");
-    isOneIp(ip.value);
+    if (isOneIp(ip.value)) return console.log(ip);
     var newItem = document.createElement('div');
     newItem.classList.add('ip-list');
     newItem.innerHTML = `
