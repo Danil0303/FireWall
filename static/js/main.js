@@ -2,13 +2,13 @@ document.getElementById('add').addEventListener('click', Add);
 
 function Add(event) {
     event.preventDefault();
-    var ip = document.getElementById('ipv4Input');
-    var dateFrom = document.getElementById('dateFrom').value;
-    var dateTo = document.getElementById('dateTo').value;
+    let ip = document.getElementById('ipv4Input');
+    let dateFrom = document.getElementById('dateFrom').value;
+    let dateTo = document.getElementById('dateTo').value;
     if (!isValid(ip.value)) return console.log(ip);
-    var ipList = document.querySelector(".ip-container");
+    let ipList = document.querySelector(".ip-container");
     if (isOneIp(ip.value)) return console.log(ip);
-    var newItem = document.createElement('div');
+    let newItem = document.createElement('div');
     newItem.classList.add('ip-list');
     newItem.innerHTML = `
          <span> ${ip.value}</span> <button class="delete-button" onclick="removeIP(this)">Удалить</button>
@@ -19,7 +19,7 @@ function Add(event) {
 
 }
 function removeIP(button){
-       var rem = button.parentNode;
+       let rem = button.parentNode;
        rem.remove();
 }
 
@@ -35,6 +35,8 @@ function isOneIp(ip) {
 
 function ShowInfo(message, type='error'){
         let toast = document.querySelector(".hidden");
+        let newItem = document.createElement('div');
+
 }
 
 //×
