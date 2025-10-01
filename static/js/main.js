@@ -48,6 +48,7 @@ function ShowInfo(message, type='error'){
 function Request(event){
     event.preventDefault();
     let ip = isOneIp();
+    if (ip.length == 0) return ShowInfo("Добавьте IPv4!")
     let dateFrom = document.getElementById('dateFrom').value;
     let dateTo = document.getElementById('dateTo').value;
     fetch("http://localhost:8000/ipv4" ,{
@@ -56,11 +57,11 @@ function Request(event){
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(
-            {'ip':ip,'dateFrom':dateFrom, 'dateTo':dateTo}
+            {'ip':ip,'dateFrom':new Date(dateFrom), 'dateTo':new Date(dateTo)}
         )
     })
     .then(response => response.json())
-    .then(data => ShowInfo(data, 'success'))
+    .then(data => ShowInfo(data.detail, 'success'))
     .catch(error => ShowInfo('Ошибка:'+error));
 
 }

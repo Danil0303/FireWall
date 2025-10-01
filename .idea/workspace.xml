@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1ea72853-6edb-42bd-a616-92e4bf48ea81" name="Changes" comment="main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page/ipv4/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/page/ipv4/model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page/ipv4/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/page/ipv4/router.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759326536773</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="main">
+      <option name="closed" value="true" />
+      <created>1759329039138</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1759329039138</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
