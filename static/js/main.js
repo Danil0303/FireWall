@@ -1,4 +1,5 @@
 document.getElementById('add').addEventListener('click', Add);
+document.getElementById('form').addEventListener('submit', Request);
 
 function Add(event) {
     event.preventDefault();
@@ -42,4 +43,9 @@ function ShowInfo(message, type='error'){
         `;
         toast.appendChild(toast_div);
         setTimeout(function(){toast_div.remove()}, 5000);
+}
+
+function Request(event){
+    event.preventDefault();
+    console.log(5);
 }
