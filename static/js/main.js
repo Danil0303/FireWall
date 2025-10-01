@@ -11,7 +11,7 @@ function Add(event) {
     var newItem = document.createElement('div');
     newItem.classList.add('ip-list');
     newItem.innerHTML = `
-         <span> ${ip.value}</span> <button class="delete-button" onclick="removeIP(this)">×</button>
+         <span> ${ip.value}</span> <button class="delete-button" onclick="removeIP(this)">Удалить</button>
     `;
     ipList.appendChild(newItem);
     ip.value = '';
@@ -33,3 +33,4 @@ function isOneIp(ip) {
       return Array.from(ipElements).some(span => span.textContent.trim() === ip);
 }
 
+//×
