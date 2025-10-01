@@ -8,7 +8,7 @@ function Add(event) {
     let dateTo = document.getElementById('dateTo').value;
     if (!isValid(ip.value)) return ShowInfo("IPv4: "+ip.value+" некорректный");
     let ipList = document.querySelector(".ip-container");
-    if (isOneIp(ip.value)) return ShowInfo("IPv4: "+ip.value+" уже добавлен!");
+    if (isOneIp().includes(ip.value)) return ShowInfo("IPv4: "+ip.value+" уже добавлен!");
     let newItem = document.createElement('div');
     newItem.classList.add('ip-list');
     newItem.innerHTML = `
@@ -28,9 +28,9 @@ function isValid(ip) {
      return regex.test(ip);
 }
 
-function isOneIp(ip) {
+function isOneIp() {
       let ipElements = document.querySelectorAll('.ip-list span');
-      return Array.from(ipElements).some(span => span.textContent.trim() === ip);
+      return Array.from(ipElements).map(span => span.textContent.trim());
 }
 
 function ShowInfo(message, type='error'){
@@ -47,5 +47,20 @@ function ShowInfo(message, type='error'){
 
 function Request(event){
     event.preventDefault();
-    console.log(5);
+    let ip = isOneIp();
+    let dateFrom = document.getElementById('dateFrom').value;
+    let dateTo = document.getElementById('dateTo').value;
+    fetch("http://localhost:8000/ipv4" ,{
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(
+            {'ip':ip,'dateFrom':dateFrom, 'dateTo':dateTo}
+        )
+    })
+    .then(response => response.json())
+    .then(data => ShowInfo(data, 'success'))
+    .catch(error => ShowInfo('Ошибка:'+error));
+
 }

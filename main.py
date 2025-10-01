@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from app.page.ipv4.router import router_ipv4
 from contextlib import asynccontextmanager
 
 @asynccontextmanager
@@ -12,10 +13,11 @@ async def lifespan(app: FastAPI):
     yield
 
 app = FastAPI(lifespan=lifespan)
+app.include_router(router_ipv4)
 app.mount('/static', StaticFiles(directory='static'), name='static')
 templates = Jinja2Templates(directory="templates")
 list = [
-        "http://localhost/:8000"
+        "http://0.0.0.0/:8000"
 ]
 app.add_middleware(
   CORSMiddleware,
@@ -23,6 +25,7 @@ app.add_middleware(
   allow_methods = ["*"],
   allow_headers = ["*"]
 )
+
 
 @app.get('/')
 async def home(request: Request):
