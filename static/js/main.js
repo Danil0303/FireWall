@@ -33,4 +33,8 @@ function isOneIp(ip) {
       return Array.from(ipElements).some(span => span.textContent.trim() === ip);
 }
 
+function ShowInfo(message, type='error'){
+        let toast = document.querySelector(".hidden");
+}
+
 //×
