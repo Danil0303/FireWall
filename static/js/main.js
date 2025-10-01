@@ -35,8 +35,8 @@ function isOneIp(ip) {
 function ShowInfo(message, type='error'){
         let toast = document.querySelector(".hidden");
         let toast_div = document.createElement('div');
-        if (type == 'error') toast_div.classList.add('btn-error');
         toast_div.classList.add('btn');
+        if (type == 'error') toast_div.classList.add('error');
         toast_div.innerHTML = `
          <span> ${message}</span> <button class="close-button" onclick="removeIP(this)">×</button>
         `;
