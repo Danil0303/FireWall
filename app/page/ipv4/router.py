@@ -10,6 +10,6 @@ async def data_ipv4(data: IPv4):
         if len(data.ip) == 0:
             return HTTPException(status_code=HTTP_205_RESET_CONTENT, detail="ip is not empty!")
         if data.dateFrom >  data.dateTo:
-            return HTTPException(status_code=HTTP_204_NO_CONTENT, detail="Проверти даты!")
+            return HTTPException(status_code=HTTP_204_NO_CONTENT, detail="Некорректные даты!")
     except Exception as e:
         return HTTPException(status_code=HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e))
